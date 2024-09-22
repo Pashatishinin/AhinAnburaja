@@ -1,6 +1,4 @@
-import img1 from "../../assets/Project_1.jpg";
-import img2 from "../../assets/Project-1-1.jpg";
-import mad_dog_jones_1 from "../../assets/MAPF1_X_MAD DOG_JONES/MAPF1_X_MAD DOG_JONES_1.jpg";
+
 import React, { useEffect } from "react";
 import gsap from "gsap";
 
