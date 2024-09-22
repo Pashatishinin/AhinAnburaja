@@ -1,0 +1,3 @@
+.item-card:hover .item-num {
+  transform: scale(2) translateY(10px) translateX(22px);
+}

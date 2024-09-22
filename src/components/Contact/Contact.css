@@ -1,0 +1,80 @@
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.rolling-text {
+  display: inline-block;
+
+  line-height: 25px;
+  font-weight: 800;
+  height: 25px;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.rolling-text:hover .contact_letter,
+.rolling-text.play .contact_letter {
+  transform: translateY(-100%);
+}
+
+.rolling-text .block:last-child {
+  color: #0EA5E9;
+}
+
+.rolling-text .contact_letter {
+  display: inline-block;
+  transition: transform 0.6s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.contact_letter:nth-child(1) {
+  transition-delay: 0s;
+}
+
+.contact_letter:nth-child(2) {
+  transition-delay: 0.015s;
+}
+
+.contact_letter:nth-child(3) {
+  transition-delay: 0.03s;
+}
+
+.contact_letter:nth-child(4) {
+  transition-delay: 0.045s;
+}
+
+.contact_letter:nth-child(5) {
+  transition-delay: 0.06s;
+}
+
+.contact_letter:nth-child(6) {
+  transition-delay: 0.075s;
+}
+
+.contact_letter:nth-child(7) {
+  transition-delay: 0.09s;
+}
+
+.contact_letter:nth-child(8) {
+  transition-delay: 0.105s;
+}
+
+.contact_letter:nth-child(9) {
+  transition-delay: 0.12s;
+}
+
+.contact_letter:nth-child(10) {
+  transition-delay: 0.135s;
+}
+
+.contact_letter:nth-child(11) {
+  transition-delay: 0.15s;
+}
+
+.contact_letter:nth-child(12) {
+  transition-delay: 0.165s;
+}
