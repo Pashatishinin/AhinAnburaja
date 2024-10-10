@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useLayoutEffect } from "react";
 import gsap from "gsap";
 import img1 from "../../assets/MAPF1_X_MAD DOG_JONES/project_1(2).jpg";
 import img2 from "../../assets/PUMA_x_AMG_SEASONAL_CONCEPT_AH24/project_2(2).jpg";
@@ -14,9 +14,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function Projects() {
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     let ctx = gsap.context(() => {
-      gsap.set(".photo:not(:first-child)", {yPercent: 100 });
+      gsap.set(".photo:not(:first-child)", { yPercent: 100 });
 
       const animation = gsap.to(".photo:not(:first-child)", {
         yPercent: -100,
