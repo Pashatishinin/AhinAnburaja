@@ -67,7 +67,7 @@ export default function Country() {
         {name}
       </div>
       <div
-        className="wrapper w-3/4 
+        className="text-white w-3/4 
       p-5 md:p-20
       text-sm md:text-2xl"
       >

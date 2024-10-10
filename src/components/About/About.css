@@ -1,4 +1,4 @@
-
+/* 
 
 .wrapper span {
   line-height: 1;
@@ -21,4 +21,9 @@
   to {
     background-size: 100% 100%;
   }
+} */
+
+
+.reveal-type {
+  border: 1px solid red;
 }

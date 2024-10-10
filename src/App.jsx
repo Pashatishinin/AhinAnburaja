@@ -1,5 +1,4 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import Hero from "./components/Hero/Hero";
 import Service from "./components/Service/Service";
@@ -31,6 +30,9 @@ function App() {
   return (
     <>
       {loading ? <Preloader onFinish={handleFinish} /> : <MainContent />}
+     {/* <Service /> 
+      <About/>
+      <Country/> */}
     </>
   );
 }

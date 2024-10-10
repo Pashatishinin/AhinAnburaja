@@ -1,5 +1,6 @@
 import React, {useLayoutEffect, useEffect, useRef} from 'react'
 import gsap from 'gsap'
+import './Hero.css'
 
 import ScrollReveal from "scrollreveal";
 

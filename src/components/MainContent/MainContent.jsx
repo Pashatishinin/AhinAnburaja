@@ -7,6 +7,7 @@ import Contact from "../Contact/Contact";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import ArchiveProject from "../Projects/ArchiveProject.jsx";
+import Projects from "../Projects/Projects.jsx";
 
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
       <Hero />
 
       <Service />
-      {/* < Projects />  */}
+      <Projects /> 
       <ArchiveProject />
       <About />
       <Country />
