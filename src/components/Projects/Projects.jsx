@@ -35,7 +35,7 @@ export default function Projects() {
         pin: ".left",
         animation: animation,
         scrub: true,
-        markers: true,
+        // markers: true,
       });
     });
   }, {scope: projects});
@@ -43,29 +43,7 @@ export default function Projects() {
 
 
 
-  // useLayoutEffect(() => {
-  //   let ctx = gsap.context(() => {
-  //     gsap.set(".photo:not(:first-child)", { yPercent: 100 });
-
-  //     const animation = gsap.to(".photo:not(:first-child)", {
-  //       yPercent: -100,
-  //       duration: 1,
-  //       stagger: 1,
-  //       ease: "power2.out",
-  //     });
-
-  //     ScrollTrigger.create({
-  //       trigger: ".gallery",
-  //       start: "top top",
-  //       end: "bottom bottom",
-  //       pin: ".left",
-  //       animation: animation,
-  //       scrub: true,
-  //       // markers: true,
-  //     });
-  //   });
-  //   return () => ctx.revert();
-  // }, []);
+  
 
 
   return (
