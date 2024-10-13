@@ -1,4 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+@layer components {
+  .contact-title {
+    @apply font-oswald bg-gradient-to-r uppercase text-transparent bg-clip-text  from-cyan-500 via-cyan-600 to-sky-800  font-medium tracking-widest 
+        text-4xl 
+        sm:text-7xl
+    md:text-6xl 
+    lg:text-7xl
+    xl:text-8xl
+  }
+}
 .container {
   display: flex;
   flex-direction: column;

@@ -30,10 +30,21 @@ function App() {
   return (
     <>
       {loading ? <Preloader onFinish={handleFinish} /> : <MainContent />}
-     {/* <Service /> 
+      {/* <Service /> 
       <About/>
       <Country/> */}
-      {/* <Projects /> */}
+      {/* <Header />
+      <Hero />
+
+      <Service />
+      <Projects />
+
+      <ArchiveProject />
+      <About />
+
+      <Country />
+      <Contact />
+      <Footer /> */}
     </>
   );
 }

@@ -48,63 +48,66 @@ export default function Projects() {
 
   return (
     <section
-    ref={projects}
+      ref={projects}
       className="flex gallery w-screen
-    flex-col md:flex-row "
+    flex-col md:flex-row"
     >
-      <div className="absolute w-screen overflow-hidden">
+      <div className="absolute w-full overflow-hidden">
         <div className="w-max">
           <img
-            className="h-screen w-full blur-xl brightness-50"
-            src={img4}
+            className="h-screen xl:w-screen blur-xl brightness-50"
+            src={img6}
             alt=""
           />
         </div>
         <div className="w-max ">
-          <img className="h-screen blur-xl brightness-50" src={img5} alt="" />
+          <img
+            className="h-screen xl:w-screen blur-xl brightness-50"
+            src={img5}
+            alt=""
+          />
         </div>
         <div className="w-max">
-          <img className="h-screen blur-xl brightness-50" src={img6} alt="" />
+          <img
+            className="h-screen xl:w-screen blur-xl brightness-50"
+            src={img4}
+            alt=""
+          />
         </div>
       </div>
       <div
-        className="absolute md:relative 
-      w-full md:w-1/2 flex justify-center"
+        className="absolute md:relative flex justify-center w-full 
+      md:w-1/2 p-2"
       >
-        <div className="relative left flex w-96  h-96 overflow-hidden top-20 md:top-40 shadow-2xl rounded-xl z-50">
-          <div className="photo absolute w-96 h-screen overflow-hidden">
-            <img src={img1} alt="" />
-          </div>
-          <div className="photo absolute w-96 h-screen overflow-hidden">
-            <img src={img2} alt="" />
-          </div>
-          <div className="photo absolute w-96 h-screen overflow-hidden">
+        <div className="projects-images left">
+          <div className="photo ">
             <img src={img3} alt="" />
           </div>
+          <div className="photo ">
+            <img src={img2} alt="" />
+          </div>
+          <div className="photo ">
+            <img src={img1} alt="" />
+          </div>
         </div>
       </div>
-      <div
-        className="right text-gray-100
-      w-screen md:w-1/2 z-40"
-      >
-        <div className="details md:pt-40 h-screen w-screen md:w-2/3 text-center md:text-left">
-          <h1 className="text-3xl md:text-5xl font-oswald font-bold">
-            MAPF1 X MAD DOG JONES
-          </h1>
-          <p className="font-montserrat text-md md:text-xl mt-10">
-            wing inspiration from the dynamic world of motorsport and the
-            visionary artistry of Mad Dog Jones, this one-of-a-kind collection
-            encapsulates the essence of championship spirit. By seamlessly
-            blending the heritage of the Mercedes-AMG PETRONAS Formula 1 Team
-            with the retro-futurism of Mad Dog Jones, each piece becomes a
-            timeless symbol of excellence.
+      <div className="right projects-items">
+        <div className="details projects-itm">
+          <h1 className="projects-itm-title">PUMA X AMG GIANT AH23</h1>
+          <p className="projects-itm-text">
+            What if you could see speed and power rather than just feel it? This
+            concept invites you into the AMG Headquarters, reimagined to
+            physically embody the sensation of G-force. Inspired by brake lights
+            and the motion of cars, the space uses vibrant colors and dynamic
+            design language to make the product visually impactful and
+            commercially appealing.
           </p>
         </div>
-        <div className="details h-screen md:pt-40 w-full md:w-2/3 text-center md:text-left">
-          <h1 className="text-3xl md:text-5xl font-oswald font-bold">
+        <div className="details projects-itm">
+          <h1 className="projects-itm-title">
             PUMA x AMG - SEASONAL CONCEPT AH24
           </h1>
-          <p className="font-montserrat text-md md:text-xl mt-10">
+          <p className="projects-itm-text">
             The collection inspired by AMG's Hammer visually channels the car's
             power through sound and movement. It features talent moving to
             music, reflecting the vibrations and energy of the Hammer, with
@@ -115,17 +118,15 @@ export default function Projects() {
             the cast in a setting that resonates with the car's essence.
           </p>
         </div>
-        <div className="details h-screen md:pt-40 w-full md:w-2/3 text-center md:text-left">
-          <h1 className="text-3xl md:text-5xl font-oswald font-bold">
-            PUMA X AMG GIANT AH23
-          </h1>
-          <p className="font-montserrat text-md md:text-xl mt-10">
-            What if you could see speed and power rather than just feel it? This
-            concept invites you into the AMG Headquarters, reimagined to
-            physically embody the sensation of G-force. Inspired by brake lights
-            and the motion of cars, the space uses vibrant colors and dynamic
-            design language to make the product visually impactful and
-            commercially appealing.
+        <div className="details projects-itm">
+          <h1 className="projects-itm-title">MAPF1 X MAD DOG JONES</h1>
+          <p className="projects-itm-text">
+            wing inspiration from the dynamic world of motorsport and the
+            visionary artistry of Mad Dog Jones, this one-of-a-kind collection
+            encapsulates the essence of championship spirit. By seamlessly
+            blending the heritage of the Mercedes-AMG PETRONAS Formula 1 Team
+            with the retro-futurism of Mad Dog Jones, each piece becomes a
+            timeless symbol of excellence.
           </p>
         </div>
       </div>

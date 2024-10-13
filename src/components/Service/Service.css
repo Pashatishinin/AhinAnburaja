@@ -1,3 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .item-card:hover .item-num {
   transform: scale(2) translateY(10px) translateX(22px);
+}
+
+@layer components {
+  .service-title {
+    @apply mt-5 font-medium font-oswald bg-gradient-to-r text-transparent bg-clip-text from-cyan-500 via-cyan-500 to-sky-600 tracking-widest uppercase leading-relaxed text-4xl 
+    text-center  
+    sm:text-7xl
+    xl:text-8xl;
+  }
+  .service-container {
+    @apply flex flex-wrap justify-center mt-10 font-montserrat font-normal tracking-wide text-sm gap-5 
+    sm:text-xl
+     md:gap-2
+    lg:text-2xl;
+  }
+  .service-card {
+    @apply relative flex p-5 justify-center items-start rounded-3xl shadow cursor-pointer border border-gray-800 shadow-sky-950 tracking-widest bg-gray-950 text-gray-300 
+    
+    
+    md:max-w-sm
+    lg:max-w-md lg:p-10
+    
+  }
+  .service-num {
+    @apply absolute top-2 left-2 opacity-5 text-blue-100 font-black transition-transform duration-1000 text-4xl 
+            md:text-6xl;
+  }
 }

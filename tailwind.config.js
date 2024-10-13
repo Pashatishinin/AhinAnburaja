@@ -15,7 +15,9 @@ export default {
         oswald: ["Oswald"],
       },
       fontSize: {
-        head: ["13rem"],
+        extralarge: ["11rem"],
+        large: ["9rem"]
+
       },
       content: {
         empty: '""',

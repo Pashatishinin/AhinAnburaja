@@ -4,7 +4,7 @@ import ScrollReveal from "scrollreveal";
 
 export default function Service() {
   useEffect(() => {
-    ScrollReveal().reveal(".item-card, .semi_label", {
+    ScrollReveal().reveal(".item-card, .service-title ", {
       origin: "bottom",
       distance: "200px",
       duration: 2000,
@@ -63,40 +63,17 @@ export default function Service() {
 
   return (
     <section
-      className="z-20 h-full relative overflow-hidden py-32 
-    px-10 sm:px-20 "
+      className="z-20 h-full relative overflow-hidden py-10 
+    px-5
+    sm:px-10"
       id="service"
     >
-      <h2
-        className="semi_label  mt-96
-      font-medium font-oswald bg-gradient-to-r text-transparent bg-clip-text from-cyan-500 via-cyan-500 to-sky-600 tracking-widest uppercase leading-20
-      text-4xl sm:text-8xl "
-      >
-        My Service
-      </h2>
+      <h2 className="service-title">My Service</h2>
 
-      <div
-        className=" flex flex-wrap mt-10 
-      font-montserrat font-normal tracking-wide  
-      text-sm md:text-2xl
-      gap-5 md:gap-2"
-      >
+      <div className="service-container">
         {services.map((item, index) => (
-          <div
-            key={index}
-            className={`item-card relative flex justify-center items-start rounded-3xl shadow cursor-pointer border border-gray-800 shadow-sky-950   
-              tracking-widest bg-gray-950 text-gray-300  
-              max-w-sm lg:max-w-md 
-              p-5 md:p-10`}
-          >
-            <h4
-              className="item-num absolute top-2 left-2 opacity-5 
-             text-blue-100 font-black 
-            transition-transform duration-1000
-            text-4xl md:text-6xl"
-            >
-              {item.num}
-            </h4>
+          <div key={index} className={`item-card service-card`}>
+            <h4 className="item-num service-num">{item.num}</h4>
             <p className="flex flex-col">
               <span className="mb-2 font-bold uppercase text-gray-100  ">
                 {item.text_label}
@@ -105,8 +82,8 @@ export default function Service() {
             </p>
           </div>
         ))}
-        <div className=" circle absolute left-20 top-72 rounded-full "></div>
-        <div className="circle  absolute right-20 bottom-0 rounded-full "></div>
+        <div className=" circle  left-20 top-72 "></div>
+        <div className="circle  right-20 bottom-0 "></div>
       </div>
     </section>
   );

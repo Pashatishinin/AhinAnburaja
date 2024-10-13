@@ -13,26 +13,30 @@ export default function Footer() {
   ];
 
   return (
-    <section className=" py-5 px-20 ">
-      <div className="flex justify-between items-center w-full pb-5 border-b border-gray-100 px-5">
+    <section className=" py-5 px-5 sm:px-10 ">
+      <div className="flex flex-col md:flex-row justify-between sm:items-center w-full pb-5 border-b border-gray-100 px-5">
         <a
           href="#hero"
-          className="w-1/2 text-gray-100  relative font-bold font-oswald text-xl uppercase tracking-widest"
+          className="opacity-0 md:opacity-100 sm:w-1/2 text-gray-100  relative font-bold font-oswald text-xl uppercase tracking-widest"
         >
           Ahin Anburaja
         </a>
         <div>
-          <div className="flex-row container gap-5 t text-lg text-gray-100 ">
+          <div className="sm:flex-row  container gap-5 t text-sm md:text-lg text-gray-100 ">
             {texts.map((item, index) => (
               <RollingText key={index} text={item.text} url={item.url} />
             ))}
           </div>
         </div>
       </div>
-      <div className=" text-gray-100 font-montserrat pt-5 font-medium tracking-widest text-sm">
-        <p className="text-center">
-          Copyright © 2024 by <span className="font-bold">Pavlo Tishynin</span>{" "}
-          || All Right Reserved
+      <div className="p-5 flex flex-col sm:flex-row text-left justify-center text-gray-100 font-montserrat pt-5 font-medium tracking-widest text-sm">
+        <p>
+          © 2024 <span className="font-bold uppercase">Pavlo Tishynin</span>
+          <span className="opacity-0 sm:opacity-100"> | </span>
+        </p>
+        <p>
+          <span className="opacity-0 sm:opacity-100"> | </span> All Right
+          Reserved
         </p>
       </div>
     </section>

@@ -52,35 +52,14 @@ export default function Country() {
   ];
 
   const CountrySection = ({ name, description, image }) => (
-    <div
-      className="relative scroll-section flex
-    flex-col md:flex-row
-    justify-start md:justify-center overflow-hidden"
-    >
-      <div
-        className="overflow-wrap w-full country-name text-gray-400 font-oswald font-bold absolute 
-        left-10 sm:left-20 bottom-0 
-        text-9xl sm:text-head 
-        max-w-52 sm:max-w-full
-      "
-      >
-        {name}
-      </div>
-      <div
-        className="text-white w-3/4 
-      p-5 md:p-20
-      text-sm md:text-2xl"
-      >
+    <div className="country-container scroll-section">
+      <div className="country-title ">{name}</div>
+      <div className="country-info">
         <span className="w-3/4">{description}</span>
       </div>
-      <img
-        src={image}
-        alt={name}
-        className=" mr-20
-        ml-10 md:ml-0 
-        mt-5 md:mt-24
-      w-4/5 sm:w-1/3"
-      />
+      <div className="flex h-2/4 lg:h-3/4">
+        <img src={image} alt={name} className="country-img" />
+      </div>
     </div>
   );
 
@@ -114,7 +93,7 @@ export default function Country() {
   }, []);
 
   return (
-    <section ref={triggerRef} id="country" className="text-gray-800">
+    <section ref={triggerRef} id="country" >
       <div
         ref={sectionRef}
         className="font-montserrat scroll-section-inner text-2xl tracking-widest leading-relaxed"

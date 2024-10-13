@@ -15,7 +15,7 @@ export default function Contact() {
   ];
 
   useEffect(() => {
-    ScrollReveal().reveal(".semi_label", {
+    ScrollReveal().reveal(".contact-title", {
       origin: "bottom",
       distance: "200px",
       duration: 2000,
@@ -45,24 +45,21 @@ export default function Contact() {
       id="contact"
     >
       <div className="z-10 absolute left-1/3 top-1/3 circle rounded-full "></div>
-      <div className="sm:text-center">
-        <h2
-          className="semi_label font-oswald bg-gradient-to-r uppercase text-transparent bg-clip-text  from-cyan-500 via-cyan-600 to-sky-800  font-medium tracking-widest 
-        text-4xl sm:text-8xl  "
-        >
-          Let's be in touch
-        </h2>
+      <div className="text-center">
+        <h2 className="contact-title">Let's be in touch</h2>
       </div>
 
-      <div className="mt-10">
+      <div className="mt-10 p-5 md:p-0">
         <div
           className=" flex justify-center w-full
-        gap-10 sm:gap-24 
+        gap-10 sm:gap-20
         flex-col-reverse sm:flex-row"
         >
           <div
             className="img-box  z-20 
+          sm:w-2/4
           md:w-1/4"
+          
           >
             <img
               src={img}
@@ -73,8 +70,10 @@ export default function Contact() {
 
           <div className=" cont-box">
             <div
-              className="z-20 container  gap-6 
-             text-xl sm:text-2xl text-gray-100 "
+              className="z-20 container  
+              gap-6 
+             text-xl 
+             md:text-2xl text-gray-100 "
             >
               {texts.map((item, index) => (
                 <RollingText key={index} text={item.text} url={item.url} />

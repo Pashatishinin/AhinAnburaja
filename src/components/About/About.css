@@ -1,29 +1,25 @@
-/* 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-.wrapper span {
-  line-height: 1;
-  margin-bottom: 40px;
-}
-
-.wrapper span {
-  color: hsl(0 0% 100% / 0.1);
-  background-clip: text;
-  background-repeat: no-repeat;
-  background-size: 0% 100%;
-  background-image: linear-gradient(90deg, #fafafa, #fafafa);
-  animation: scroll-reveal linear forwards;
-  animation-timeline: view();
-  animation-range-start: cover 30vh;
-  animation-range-end: cover 20vh;
-}
-
-@keyframes scroll-reveal {
-  to {
-    background-size: 100% 100%;
+@layer components {
+  .about-container {
+    @apply relative h-full gap-3 flex-col flex w-full justify-between
+    lg:flex-row 
   }
-} */
-
-
-.reveal-type {
-  border: 1px solid red;
+  .about-title {
+    @apply font-medium font-oswald  text-transparent bg-gradient-to-l bg-clip-text from-cyan-500 via-cyan-500 to-sky-600 tracking-widest uppercase leading-relaxed
+    text-5xl 
+    sm:text-7xl
+    md:text-6xl 
+    lg:text-7xl
+    xl:text-8xl;
+  }
+  .about-info {
+    @apply pt-10 text-white font-montserrat text-lg w-full font-normal tracking-widest leading-relaxed
+    sm:text-xl
+    md:text-2xl 
+    lg:w-3/5;
+  }
 }
+

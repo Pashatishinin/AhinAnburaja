@@ -15,7 +15,10 @@
   behavior: smooth;
   
 }
+html {
+  scroll-behavior: smooth;
 
+}
 body {
     background-color: #030712;
     
@@ -28,6 +31,8 @@ body {
   background: linear-gradient(to bottom, #082f49, #0c4a6e);
   filter: blur(120px);
   z-index: -10;
+  position: absolute;
+  border-radius: 50%;
 }
 
 

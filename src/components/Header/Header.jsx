@@ -172,7 +172,8 @@ export default function Header() {
         <div className="logo relative ">
           <a
             href="#hero"
-            className=" relative tracking-huge -top-20 font-black  text-gray-100  font-oswald text-2xl uppercase"
+            className=" relative tracking-huge -top-20 font-black  text-gray-100  font-oswald  uppercase
+            text-xl sm:text-2xl"
             ref={logoRef}
             onClick={handleLogoClick}
           >

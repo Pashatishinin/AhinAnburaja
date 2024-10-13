@@ -119,7 +119,7 @@ export default function ArchiveProject() {
             gap-10 md:gap-0"
           >
             <div
-              className="flex gap-5 flex-wrap
+              className="flex gap-5 flex-wrap sm:w-1/2
             "
             >
               {project.images.map((img, i) => (
@@ -133,7 +133,8 @@ export default function ArchiveProject() {
               ))}
             </div>
             <div className="
-            w-full md:w-1/3">
+            w-full md:w-1/2
+            lg:w-1/3">
               <h4 className=" font-oswald font-bold tracking-widest text-3xl uppercase mb-5 ">
                 {project.title}
                 {project.link && (

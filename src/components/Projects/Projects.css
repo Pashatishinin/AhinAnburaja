@@ -1,4 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+
+@layer components {
+    .projects-images {
+        @apply relative flex overflow-hidden top-20 shadow-2xl rounded-xl z-50 w-72 h-72
+        sm:w-80 sm:h-80
+        md:top-40 
+        lg:w-96 lg:h-96
+
+    }
+    .photo {
+        @apply absolute  h-screen overflow-hidden
+        w-72
+        sm:w-80
+        lg:w-96
+    }
+    .projects-items {
+        @apply text-gray-100 w-screen z-40
+      md:w-1/2 
+    }
+    .projects-itm {
+        @apply h-screen w-screen  text-center p-5
+        sm:p-10
+        md:w-full  md:text-left md:pt-40
+        lg:pt-40 lg:px-20
+    }
+    .projects-itm-title {
+        @apply text-3xl  font-oswald font-bold
+        sm:text-5xl
+    }
+    .projects-itm-text {
+        @apply font-montserrat text-base  mt-2 sm:mt-10
+        lg:text-xl
+    }
+}
 
 .model {
     padding: 20px;
@@ -50,10 +87,16 @@
 
 
 
-
-.details {
-    padding-top: 32rem;
+@media (max-width:768px) {
+    .details {
+    padding-top: 24rem;
+    }
 }
+
+
+
+
+
 
 
 
