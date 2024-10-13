@@ -23,7 +23,7 @@ function App() {
       <ArchiveProject />
       {/* <About /> */}
       {/* <Country /> */}
-      <Contact />
+      {/* <Contact /> */}
       <Footer />
     </>
   );
