@@ -1,4 +1,4 @@
-import React, { useLayoutEffect } from "react";
+import React, { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import img1 from "../../assets/MAPF1_X_MAD DOG_JONES/project_1(2).jpg";
 import img2 from "../../assets/PUMA_x_AMG_SEASONAL_CONCEPT_AH24/project_2(2).jpg";
@@ -8,13 +8,16 @@ import img5 from "../../assets/PUMA_x_AMG_SEASONAL_CONCEPT_AH24/bg-2(2).jpg"
 import img6 from "../../assets/PUMA_X_AMG_GIANT_AH23/bg-3(2).jpg"
 
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import {useGSAP} from '@gsap/react'
 gsap.registerPlugin(ScrollTrigger);
 
 
 
 export default function Projects() {
+  const projects = useRef()
 
-  useLayoutEffect(() => {
+
+  useGSAP(() => {
     let ctx = gsap.context(() => {
       gsap.set(".photo:not(:first-child)", { yPercent: 100 });
 
@@ -32,15 +35,42 @@ export default function Projects() {
         pin: ".left",
         animation: animation,
         scrub: true,
-        // markers: true,
+        markers: true,
       });
     });
-    return () => ctx.revert();
-  }, []);
+  }, {scope: projects});
+
+
+
+
+  // useLayoutEffect(() => {
+  //   let ctx = gsap.context(() => {
+  //     gsap.set(".photo:not(:first-child)", { yPercent: 100 });
+
+  //     const animation = gsap.to(".photo:not(:first-child)", {
+  //       yPercent: -100,
+  //       duration: 1,
+  //       stagger: 1,
+  //       ease: "power2.out",
+  //     });
+
+  //     ScrollTrigger.create({
+  //       trigger: ".gallery",
+  //       start: "top top",
+  //       end: "bottom bottom",
+  //       pin: ".left",
+  //       animation: animation,
+  //       scrub: true,
+  //       // markers: true,
+  //     });
+  //   });
+  //   return () => ctx.revert();
+  // }, []);
 
 
   return (
     <section
+    ref={projects}
       className="flex gallery w-screen
     flex-col md:flex-row "
     >
