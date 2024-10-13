@@ -17,6 +17,7 @@ export default function Service() {
     {
       num: "01",
       text_label: "Product Lifecycle Management",
+      text: "Overseeing the entire lifecycle of products. By integrating data, new processes, and market trends I’ve been able to enhance collaboration, team performance, and achieve business goals.",
     },
     {
       num: "02",
