@@ -22,7 +22,7 @@ function App() {
       <Projects /> 
       <ArchiveProject />
       <About />
-      <Country />
+      {/* <Country /> */}
       <Contact />
       <Footer />
     </>
