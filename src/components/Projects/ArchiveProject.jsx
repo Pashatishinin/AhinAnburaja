@@ -61,10 +61,11 @@ export default function ArchiveProject() {
       body: "This collection pays homage to the world of automotive design, drawing inspiration from the intriguing world of car prototypes.  this collection celebrates the fusion of fashion, technology, and car culture.  The collection's details and designs are meticulously crafted to reflect the passion and excitement associated with the automotive world.",
     },
     {
-      images: [img5, img6, img7],
-      title: "PUMA x AMG - SEASONAL CONCEPT AH24",
-      body: "The collection inspired by AMG's Hammer visually channels the car's power through sound and movement. It features talent moving to music, reflecting the vibrations and energy of the Hammer, with bold, eccentric movements and interactions with the car. The use of the AMG crest ties the collection to the car's heritage, enhancing the sense of power and prestige. The collection embodies the Hammer's dynamic vibe, showcasing the self-confidence and energy of the cast in a setting that resonates with the car's essence.",
+      images: [img21, img22, img23, img24],
+      title: "PUMA X MAPF1 - X Power AH23",
+      body: "Drawing inspiration from the Mercedes-AMG Petronas F1 Team, PUMA brilliantly merges top-notch performance design with day-to-day wearability. Blending performance and style inspired by the champions of the race track",
     },
+
     {
       images: [img8, img9],
       title: "PUMA x AMG Car Spotter",
@@ -86,10 +87,11 @@ export default function ArchiveProject() {
       body: "The PUMA x MAPF1 'Garage Crew' collection creatively explores the shared DNA of each partner's garage crew, drawing inspiration from authentic mechanic aesthetics. The collection features mechanic-inspired silhouettes and badges, reflecting the gritty, hands-on spirit of a racing garage. This collaboration captures the essence of the behind-the-scenes work that drives the success of the Mercedes-AMG Petronas Formula One Team.",
     },
     {
-      images: [img21, img22, img23, img24],
-      title: "PUMA X MAPF1 - X Power AH23",
-      body: "Drawing inspiration from the Mercedes-AMG Petronas F1 Team, PUMA brilliantly merges top-notch performance design with day-to-day wearability. Blending performance and style inspired by the champions of the race track",
+      images: [img5, img6, img7],
+      title: "PUMA x AMG - SEASONAL CONCEPT AH24",
+      body: "The collection inspired by AMG's Hammer visually channels the car's power through sound and movement. It features talent moving to music, reflecting the vibrations and energy of the Hammer, with bold, eccentric movements and interactions with the car. The use of the AMG crest ties the collection to the car's heritage, enhancing the sense of power and prestige. The collection embodies the Hammer's dynamic vibe, showcasing the self-confidence and energy of the cast in a setting that resonates with the car's essence.",
     },
+
     {
       images: [img17, img18, img19, img20],
       title: "PUMA X MAPF1 - NEON ENERGY",
