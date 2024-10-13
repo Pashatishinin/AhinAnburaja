@@ -19,10 +19,10 @@ export default function Projects() {
 
   useGSAP(() => {
     let ctx = gsap.context(() => {
-      gsap.set(".photo:not(:first-child)", { yPercent: 100 });
+      gsap.set(".photo:not(:first-child)", { y: 500 });
 
       const animation = gsap.to(".photo:not(:first-child)", {
-        yPercent: -100,
+        y: 0,
         duration: 1,
         stagger: 1,
         ease: "power2.out",

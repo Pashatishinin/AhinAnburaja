@@ -29,10 +29,11 @@ function App() {
 
   return (
     <>
-      {loading ? <Preloader onFinish={handleFinish} /> : <MainContent />}
+      {/* {loading ? <Preloader onFinish={handleFinish} /> : <MainContent />} */}
      {/* <Service /> 
       <About/>
       <Country/> */}
+      <Projects />
     </>
   );
 }
