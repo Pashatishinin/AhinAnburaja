@@ -11,6 +11,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 
 export default function Country() {
+  
   const sectionRef = useRef(null);
   const triggerRef = useRef(null);
 
@@ -56,7 +57,7 @@ export default function Country() {
     <div className="country-container scroll-section">
       <div className="country-title ">{name}</div>
       <div className="country-info">
-        <span className="w-3/4">{description}</span>
+        <span className="w-3/4 ">{description}</span>
       </div>
       <div className="flex h-2/4 lg:h-3/4">
         <img src={image} alt={name} className="country-img" />
@@ -84,8 +85,7 @@ export default function Country() {
             end: "+=2000 top", // Модифицированный end
             scrub: 0.6,
             pin: true,
-            onEnter: () => console.log("Entered"),
-            onLeave: () => console.log("Left"),
+            
           },
         }
       );
@@ -94,7 +94,7 @@ export default function Country() {
       return () => {
         pin.kill();
       };
-    }, 100); // Здесь вы можете изменить задержку, если требуется больше времени
+    }, 1); // Здесь вы можете изменить задержку, если требуется больше времени
 
     // Очищаем таймер при размонтировании компонента
     return () => clearTimeout(timeoutId);

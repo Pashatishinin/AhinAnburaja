@@ -34,17 +34,17 @@ function App() {
       <About/>
       <Country/> */}
       {/* <Header />
-      <Hero />
+      <Hero /> */}
 
-      <Service />
+      {/* <Service />
       <Projects />
 
-      <ArchiveProject />
-      <About />
+      <ArchiveProject /> */}
+      {/* <About /> */}
 
-      <Country />
-      <Contact />
-      <Footer /> */}
+      {/* <Country /> */}
+      {/* <Contact /> */}
+      {/* <Footer /> */}
     </>
   );
 }

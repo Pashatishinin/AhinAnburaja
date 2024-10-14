@@ -6,15 +6,19 @@ import RollingText from "./RollingText";
 
 import ScrollReveal from "scrollreveal";
 
+
+
 export default function Contact() {
+  
   const texts = [
     { text: "Phone", url: "tel:+491771915288" },
     { text: "Email", url: "mailto:ahinthhan@gmail.com" },
     { text: "WhatsApp", url: "https://wa.me/491771915288" },
     { text: "LinkedIn", url: "http://www.linkedin.com/in/ahinthhan-anburaja" },
   ];
-
+  
   useEffect(() => {
+     
     ScrollReveal().reveal(".contact-title", {
       origin: "bottom",
       distance: "200px",

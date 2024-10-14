@@ -9,7 +9,7 @@ import img6 from "../../assets/PUMA_X_AMG_GIANT_AH23/bg_3(2).jpg"
 
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {useGSAP} from '@gsap/react'
-gsap.registerPlugin(ScrollTrigger);
+
 
 
 
@@ -18,6 +18,7 @@ export default function Projects() {
 
 
   useGSAP(() => {
+    gsap.registerPlugin(ScrollTrigger);
     let ctx = gsap.context(() => {
       gsap.set(".photo:not(:first-child)", { y: 500 });
 
