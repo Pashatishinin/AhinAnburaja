@@ -108,7 +108,7 @@ export default function Projects() {
         </div>
         <div className="details projects-itm">
           <h1 className="projects-itm-title">
-            PUMA x AMG - SEASONAL CONCEPT AH24
+            PUMA x AMG - THE HAMMER AH24
           </h1>
           <p className="projects-itm-text">
             The collection inspired by AMG's Hammer visually channels the car's
@@ -122,9 +122,9 @@ export default function Projects() {
           </p>
         </div>
         <div className="details projects-itm">
-          <h1 className="projects-itm-title">MAPF1 X MAD DOG JONES</h1>
+          <h1 className="projects-itm-title">MAPF1 X MAD DOG JONES SS24</h1>
           <p className="projects-itm-text">
-            wing inspiration from the dynamic world of motorsport and the
+            With inspiration from the dynamic world of motorsport and the
             visionary artistry of Mad Dog Jones, this one-of-a-kind collection
             encapsulates the essence of championship spirit. By seamlessly
             blending the heritage of the Mercedes-AMG PETRONAS Formula 1 Team

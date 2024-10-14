@@ -183,7 +183,7 @@ export default function Hero() {
           </div>
           <div className="hero-block">
             <h1 className="mt-96 text-gray-100 text-center sm:text-2xl  font-normal tracking-widest uppercase">
-              And i am
+              And i am a
             </h1>
           </div>
           <h3 className="p-5 hero-block text-4xl sm:text-5xl tracking-widest font-medium text-center font-oswald uppercase  mb-28 bg-gradient-to-r text-transparent bg-clip-text from-cyan-500 via-cyan-500 to-sky-600 ">
