@@ -58,7 +58,7 @@
     @apply  text-white leading-relaxed tracking-widest
     sm:w-3/4 
     mt-14 sm:mt-0
-      px-0 sm:px-5 text-base
+      px-0 sm:px-5 text-lg
       md:text-2xl md:p-20
       mb-5 lg:mb-40;
   }

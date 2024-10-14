@@ -85,7 +85,7 @@ export default function Country() {
             end: "+=2000 top", // Модифицированный end
             scrub: 0.6,
             pin: true,
-            
+            invalidateOnRefresh: true,
           },
         }
       );

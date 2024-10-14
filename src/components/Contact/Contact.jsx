@@ -23,22 +23,22 @@ export default function Contact() {
       origin: "bottom",
       distance: "200px",
       duration: 2000,
-      delay: 200,
-      reset: true,
+      delay:200,
+      reset: false,
     });
     ScrollReveal().reveal(".cont-box", {
       origin: "right",
       distance: "200px",
       duration: 2000,
       delay: 200,
-      reset: true,
+      reset: false,
     });
     ScrollReveal().reveal(".img-box", {
       origin: "left",
       distance: "200px",
       duration: 2000,
       delay: 200,
-      reset: true,
+      reset: false,
     });
   }, []);
 
