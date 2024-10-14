@@ -67,19 +67,19 @@ export default function Country() {
 
   gsap.registerPlugin(ScrollTrigger);
   
-  useEffect(() => {
-    const pin = gsap.to(sectionRef.current, {
-      transform: "translate(-75%)",
-      scrollTrigger: {
-        trigger: triggerRef.current,
-        scroller: "body",
-        markers: true,
-        start: "top 0%",
-        end:"top -150%",
-        scrub:2,
-        pin:true
-      },
-    });
+  // useEffect(() => {
+  //   const pin = gsap.to(sectionRef.current, {
+  //     transform: "translate(-75%)",
+  //     scrollTrigger: {
+  //       trigger: triggerRef.current,
+  //       scroller: "body",
+  //       markers: true,
+  //       start: "top 0%",
+  //       end:"top -150%",
+  //       scrub:2,
+  //       pin:true
+  //     },
+  //   });
     // const pin = gsap.fromTo(
     //   sectionRef.current,
     //   {
@@ -98,10 +98,36 @@ export default function Country() {
     //     },
     //   }
     // );
-    return () => {
+  //   return () => {
+  //     {
+  //       /* A return function for killing the animation on component unmount */
+  //     }
+  //     pin.kill();
+  //   };
+  // }, []);
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    
+    const pin = gsap.fromTo(
+      sectionRef.current,
+      { translateX: 0 },
       {
-        /* A return function for killing the animation on component unmount */
+        translateX: "-300vw",
+        ease: "none",
+        duration: 1,
+        scrollTrigger: {
+          trigger: triggerRef.current,
+          start: "top top",
+          end: "+=2000 top", // Модифицированный end
+          scrub: 0.6,
+          pin: true,
+          onEnter: () => console.log("Entered"), // Для отладки
+          onLeave: () => console.log("Left"), // Для отладки
+        },
       }
+    );
+
+    return () => {
       pin.kill();
     };
   }, []);
@@ -110,7 +136,7 @@ export default function Country() {
     <section ref={triggerRef} id="country" >
       <div
         ref={sectionRef}
-        className="font-montserrat scroll-section-inner text-2xl tracking-widest leading-relaxed"
+        className="font-montserrat scroll-section-inner text-2xl tracking-widest leading-relaxed h-screen"
       >
         {countryData.map((country, index) => (
           <CountrySection
