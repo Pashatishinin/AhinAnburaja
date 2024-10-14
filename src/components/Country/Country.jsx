@@ -8,7 +8,7 @@ import img4 from "../../assets/map_4.png";
 import "./Country.css";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(ScrollTrigger);
+
 
 export default function Country() {
   const sectionRef = useRef(null);
@@ -64,10 +64,11 @@ export default function Country() {
     </div>
   );
 
-  gsap.registerPlugin(ScrollTrigger);
+  
   
   
   useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
     // Добавляем отложенную инициализацию
     const timeoutId = setTimeout(() => {
       const pin = gsap.fromTo(
