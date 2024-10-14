@@ -3,9 +3,9 @@ import gsap from "gsap";
 import img1 from "../../assets/MAPF1_X_MAD DOG_JONES/project_1.jpg";
 import img2 from "../../assets/PUMA_x_AMG_SEASONAL_CONCEPT_AH24/project_2.jpg";
 import img3 from "../../assets/PUMA_X_AMG_GIANT_AH23/project_3.jpg";
-import img4 from "../../assets/MAPF1_X_MAD DOG_JONES/bg_1.jpg"
-import img5 from "../../assets/PUMA_x_AMG_SEASONAL_CONCEPT_AH24/bg_2.jpg"
-import img6 from "../../assets/PUMA_X_AMG_GIANT_AH23/bg_3.jpg"
+import img4 from "../../assets/MAPF1_X_MAD DOG_JONES/bg_1(2).jpg"
+import img5 from "../../assets/PUMA_x_AMG_SEASONAL_CONCEPT_AH24/bg_2(2).jpg"
+import img6 from "../../assets/PUMA_X_AMG_GIANT_AH23/bg_3(2).jpg"
 
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {useGSAP} from '@gsap/react'
