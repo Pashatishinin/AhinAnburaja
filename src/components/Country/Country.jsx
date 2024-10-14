@@ -106,30 +106,35 @@ export default function Country() {
   //   };
   // }, []);
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-    
-    const pin = gsap.fromTo(
-      sectionRef.current,
-      { translateX: 0 },
-      {
-        translateX: "-300vw",
-        ease: "none",
-        duration: 1,
-        scrollTrigger: {
-          trigger: triggerRef.current,
-          start: "top top",
-          end: "+=2000 top", // Модифицированный end
-          scrub: 0.6,
-          pin: true,
-          onEnter: () => console.log("Entered"), // Для отладки
-          onLeave: () => console.log("Left"), // Для отладки
-        },
-      }
-    );
+    // Добавляем отложенную инициализацию
+    const timeoutId = setTimeout(() => {
+      const pin = gsap.fromTo(
+        sectionRef.current,
+        { translateX: 0 },
+        {
+          translateX: "-300vw",
+          ease: "none",
+          duration: 1,
+          scrollTrigger: {
+            trigger: triggerRef.current,
+            start: "top top",
+            end: "+=2000 top", // Модифицированный end
+            scrub: 0.6,
+            pin: true,
+            onEnter: () => console.log("Entered"),
+            onLeave: () => console.log("Left"),
+          },
+        }
+      );
 
-    return () => {
-      pin.kill();
-    };
+      // Удаляем анимацию при размонтировании компонента
+      return () => {
+        pin.kill();
+      };
+    }, 100); // Здесь вы можете изменить задержку, если требуется больше времени
+
+    // Очищаем таймер при размонтировании компонента
+    return () => clearTimeout(timeoutId);
   }, []);
 
   return (
