@@ -24,7 +24,7 @@ export default function About() {
 
     splitTypes.forEach((char, i) => {
       const text = new SplitType(char, { types: "words" });
-      console.log("Characters:", text.chars);
+      
 
       gsap.from(text.words, {
         scrollTrigger: {

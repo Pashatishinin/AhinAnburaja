@@ -1,11 +1,11 @@
 import React, { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
-import img1 from "../../assets/MAPF1_X_MAD DOG_JONES/project_1(2).jpg";
-import img2 from "../../assets/PUMA_x_AMG_SEASONAL_CONCEPT_AH24/project_2(2).jpg";
-import img3 from "../../assets/PUMA_X_AMG_GIANT_AH23/project_3(2).jpg";
-import img4 from "../../assets/MAPF1_X_MAD DOG_JONES/bg-1(2).jpg"
-import img5 from "../../assets/PUMA_x_AMG_SEASONAL_CONCEPT_AH24/bg-2(2).jpg"
-import img6 from "../../assets/PUMA_X_AMG_GIANT_AH23/bg-3(2).jpg"
+import img1 from "../../assets/MAPF1_X_MAD DOG_JONES/project_1.jpg";
+import img2 from "../../assets/PUMA_x_AMG_SEASONAL_CONCEPT_AH24/project_2.jpg";
+import img3 from "../../assets/PUMA_X_AMG_GIANT_AH23/project_3.jpg";
+import img4 from "../../assets/MAPF1_X_MAD DOG_JONES/bg_1.jpg"
+import img5 from "../../assets/PUMA_x_AMG_SEASONAL_CONCEPT_AH24/bg_2.jpg"
+import img6 from "../../assets/PUMA_X_AMG_GIANT_AH23/bg_3.jpg"
 
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {useGSAP} from '@gsap/react'
@@ -58,6 +58,7 @@ export default function Projects() {
             className="h-screen xl:w-screen blur-xl brightness-50"
             src={img6}
             alt=""
+            loading="lazy"
           />
         </div>
         <div className="w-max ">
@@ -65,6 +66,7 @@ export default function Projects() {
             className="h-screen xl:w-screen blur-xl brightness-50"
             src={img5}
             alt=""
+            loading="lazy"
           />
         </div>
         <div className="w-max">
@@ -72,6 +74,7 @@ export default function Projects() {
             className="h-screen xl:w-screen blur-xl brightness-50"
             src={img4}
             alt=""
+            loading="lazy"
           />
         </div>
       </div>
@@ -81,13 +84,13 @@ export default function Projects() {
       >
         <div className="projects-images left">
           <div className="photo ">
-            <img src={img3} alt="" />
+            <img src={img3} alt="" loading="lazy" />
           </div>
           <div className="photo ">
-            <img src={img2} alt="" />
+            <img src={img2} alt="" loading="lazy" />
           </div>
           <div className="photo ">
-            <img src={img1} alt="" />
+            <img src={img1} alt="" loading="lazy" />
           </div>
         </div>
       </div>

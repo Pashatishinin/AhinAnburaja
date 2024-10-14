@@ -1,5 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import gsap from "gsap";
+
+import { useGSAP } from "@gsap/react";
 import img1 from "../../assets/map_1.png";
 import img2 from "../../assets/map_2.png";
 import img3 from "../../assets/map_3.png";
@@ -64,26 +66,38 @@ export default function Country() {
   );
 
   gsap.registerPlugin(ScrollTrigger);
-
+  
   useEffect(() => {
-    const pin = gsap.fromTo(
-      sectionRef.current,
-      {
-        translateX: 0,
+    const pin = gsap.to(sectionRef.current, {
+      transform: "translate(-75%)",
+      scrollTrigger: {
+        trigger: triggerRef.current,
+        scroller: "body",
+        markers: true,
+        start: "top 0%",
+        end:"top -150%",
+        scrub:2,
+        pin:true
       },
-      {
-        translateX: "-300vw",
-        ease: "none",
-        duration: 1,
-        scrollTrigger: {
-          trigger: triggerRef.current,
-          start: "top top",
-          end: "2000 top",
-          scrub: 0.6,
-          pin: true,
-        },
-      }
-    );
+    });
+    // const pin = gsap.fromTo(
+    //   sectionRef.current,
+    //   {
+    //     translateX: 0,
+    //   },
+    //   {
+    //     translateX: "-300vw",
+    //     ease: "none",
+    //     duration: 1,
+    //     scrollTrigger: {
+    //       trigger: triggerRef.current,
+    //       start: "top top",
+    //       end: "2000 top",
+    //       scrub: 0.6,
+    //       pin: true,
+    //     },
+    //   }
+    // );
     return () => {
       {
         /* A return function for killing the animation on component unmount */
