@@ -68,48 +68,90 @@ export default function Country() {
   
   
   
-  useEffect(() => {
-    
-    // Добавляем отложенную инициализацию
-    const timeoutId = setTimeout(() => {
-      const pin = gsap.fromTo(
-        sectionRef.current,
-        { translateX: 0 },
-        {
-          translateX: "-300vw",
-          ease: "none",
-          duration: 1,
-          scrollTrigger: {
-            trigger: triggerRef.current,
-            start: "top top",
-            end: "+=2000 top", // Модифицированный end
-            scrub: 0.6,
-            markers: true,
-            pin: true,
-            invalidateOnRefresh: true,
-            
-          },
-        }
-      );
-      ScrollTrigger.refresh();
+  
 
-      return () => {
-        
-        pin.kill();
-        ScrollTrigger.getAll().forEach((trigger) => trigger.kill()); // Уничтожаем все триггеры
+    useEffect(() => {
+      let animationFrameId; // Для хранения идентификатора кадра
+
+      const animate = () => {
+        const pin = gsap.fromTo(
+          sectionRef.current,
+          { translateX: 0 },
+          {
+            translateX: "-300vw",
+            ease: "none",
+            duration: 1,
+            scrollTrigger: {
+              trigger: triggerRef.current,
+              start: "top top",
+              end: "+=2000 top",
+              scrub: 0.6,
+              markers: true,
+              pin: true,
+              invalidateOnRefresh: true,
+            },
+          }
+        );
+
+        ScrollTrigger.refresh(); // Обновляем триггер после инициализации
+
+        return () => {
+          pin.kill();
+          ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+        };
       };
 
-      // Удаляем анимацию при размонтировании компонента
-      
-    }, 300);
-    
-    return () => {
-      clearTimeout(timeoutId);
-      // Уничтожаем все триггеры
-    };// Здесь вы можете изменить задержку, если требуется больше времени
+      // Инициализируем анимацию с requestAnimationFrame
+      const startAnimation = () => {
+        animationFrameId = requestAnimationFrame(animate);
+      };
 
-    // Очищаем таймер при размонтировании компонента
-  }, []);
+      // Запускаем requestAnimationFrame на следующем кадре
+      animationFrameId = requestAnimationFrame(startAnimation);
+
+      // Очищаем анимацию при размонтировании компонента
+      return () => {
+        cancelAnimationFrame(animationFrameId); // Отменяем кадр анимации
+        ScrollTrigger.getAll().forEach((trigger) => trigger.kill()); // Уничтожаем все триггеры
+      };
+    }, []);
+    // useEffect(() => {
+    //   // Добавляем отложенную инициализацию
+    //   const timeoutId = setTimeout(() => {
+    //     const pin = gsap.fromTo(
+    //       sectionRef.current,
+    //       { translateX: 0 },
+    //       {
+    //         translateX: "-300vw",
+    //         ease: "none",
+    //         duration: 1,
+    //         scrollTrigger: {
+    //           trigger: triggerRef.current,
+    //           start: "top top",
+    //           end: "+=2000 top", // Модифицированный end
+    //           scrub: 0.6,
+    //           markers: true,
+    //           pin: true,
+    //           invalidateOnRefresh: true,
+    //         },
+    //       }
+    //     );
+    //     ScrollTrigger.refresh();
+
+    //     return () => {
+    //       pin.kill();
+    //       ScrollTrigger.getAll().forEach((trigger) => trigger.kill()); // Уничтожаем все триггеры
+    //     };
+
+    //     // Удаляем анимацию при размонтировании компонента
+    //   }, 300);
+    //   return () => {
+    //     clearTimeout(timeoutId);
+    //     // Уничтожаем все триггеры
+    //   }; // Здесь вы можете изменить задержку, если требуется больше времени
+
+    //   // Очищаем таймер при размонтировании компонента
+    // }, []);
 
   return (
     <section ref={triggerRef} id="country" >
