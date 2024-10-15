@@ -91,6 +91,8 @@ export default function Country() {
           },
         }
       );
+      ScrollTrigger.refresh();
+      
       return () => {
         
         pin.kill();
