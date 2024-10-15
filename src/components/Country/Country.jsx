@@ -71,7 +71,8 @@ export default function Country() {
   
 
     useEffect(() => {
-      let animationFrameId; // Для хранения идентификатора кадра
+      let animationFrameId;
+      let observer;
 
       const animate = () => {
         const pin = gsap.fromTo(
@@ -93,28 +94,58 @@ export default function Country() {
           }
         );
 
-        ScrollTrigger.refresh(); // Обновляем триггер после инициализации
+        ScrollTrigger.refresh(); // Обновляем триггеры ScrollTrigger
+
+        // Добавляем небольшую задержку перед синхронизацией ScrollReveal
+        setTimeout(() => {
+          if (window.ScrollReveal) {
+            window.ScrollReveal().sync();
+          }
+        }, 300); // Задержка 300ms, подстройка по необходимости
 
         return () => {
           pin.kill();
-          ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+          // Уничтожаем только GSAP триггеры, не все ScrollTrigger
+          ScrollTrigger.getAll().forEach((trigger) => {
+            if (trigger.animation && trigger.animation.vars) {
+              trigger.kill();
+            }
+          });
         };
       };
 
-      // Инициализируем анимацию с requestAnimationFrame
       const startAnimation = () => {
         animationFrameId = requestAnimationFrame(animate);
       };
 
-      // Запускаем requestAnimationFrame на следующем кадре
-      animationFrameId = requestAnimationFrame(startAnimation);
+      const handleIntersect = (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            startAnimation();
+            observer.disconnect();
+          }
+        });
+      };
 
-      // Очищаем анимацию при размонтировании компонента
+      observer = new IntersectionObserver(handleIntersect, {
+        root: null,
+        threshold: 0.1,
+      });
+
+      observer.observe(sectionRef.current);
+
       return () => {
-        cancelAnimationFrame(animationFrameId); // Отменяем кадр анимации
-        ScrollTrigger.getAll().forEach((trigger) => trigger.kill()); // Уничтожаем все триггеры
+        if (animationFrameId) {
+          cancelAnimationFrame(animationFrameId);
+        }
+        if (observer) {
+          observer.disconnect();
+        }
+        ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
       };
     }, []);
+
+
     // useEffect(() => {
     //   // Добавляем отложенную инициализацию
     //   const timeoutId = setTimeout(() => {
