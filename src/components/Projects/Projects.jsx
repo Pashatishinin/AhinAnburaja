@@ -101,7 +101,7 @@ export default function Projects() {
       </div>
       <div className="right projects-items">
         <div className="details projects-itm">
-          <h1 className="projects-itm-title">PUMA X AMG GIANT AH23</h1>
+          <h1 className="projects-itm-title">PUMA X AMG GIANT</h1>
           <p className="projects-itm-text">
             What if you could see speed and power rather than just feel it? This
             concept invites you into the AMG Headquarters, reimagined to
@@ -113,7 +113,7 @@ export default function Projects() {
         </div>
         <div className="details projects-itm">
           <h1 className="projects-itm-title">
-            PUMA x AMG - THE HAMMER AH24
+            PUMA x AMG - THE HAMMER
           </h1>
           <p className="projects-itm-text">
             The collection inspired by AMG's Hammer visually channels the car's
@@ -127,7 +127,7 @@ export default function Projects() {
           </p>
         </div>
         <div className="details projects-itm">
-          <h1 className="projects-itm-title">MAPF1 X MAD DOG JONES SS24</h1>
+          <h1 className="projects-itm-title">MAPF1 X MAD DOG JONES</h1>
           <p className="projects-itm-text">
             With inspiration from the dynamic world of motorsport and the
             visionary artistry of Mad Dog Jones, this one-of-a-kind collection

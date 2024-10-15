@@ -87,7 +87,7 @@ export default function Country() {
               start: "top top",
               end: "+=2000 top",
               scrub: 0.6,
-              markers: true,
+              markers: false,
               pin: true,
               invalidateOnRefresh: true,
             },

@@ -60,7 +60,7 @@ export default function ArchiveProject() {
     },
     {
       images: [img21, img22, img23, img24],
-      title: "PUMA X MAPF1 - X Power AH23",
+      title: "PUMA X MAPF1 - X Power",
       body: "Drawing inspiration from the Mercedes-AMG Petronas F1 Team, PUMA brilliantly merges top-notch performance design with day-to-day wearability. Blending performance and style inspired by the champions of the race track",
     },
 
@@ -71,7 +71,7 @@ export default function ArchiveProject() {
     },
     {
       images: [img10, img11, img12],
-      title: "PUMA X AMG GIANT AH23",
+      title: "PUMA X AMG GIANT",
       body: "What if you could see speed and power rather than just feel it? This concept invites you into the AMG Headquarters, reimagined to physically embody the sensation of G-force. Inspired by brake lights and the motion of cars, the space uses vibrant colors and dynamic design language to make the product visually impactful and commercially appealing.",
     },
     {
@@ -86,12 +86,12 @@ export default function ArchiveProject() {
     },
     {
       images: [img5, img6, img7],
-      title: "PUMA x AMG - THE HAMMER AH24",
+      title: "PUMA x AMG - THE HAMMER",
       body: "The collection inspired by AMG's Hammer visually channels the car's power through sound and movement. It features talent moving to music, reflecting the vibrations and energy of the Hammer, with bold, eccentric movements and interactions with the car. The use of the AMG crest ties the collection to the car's heritage, enhancing the sense of power and prestige. The collection embodies the Hammer's dynamic vibe, showcasing the self-confidence and energy of the cast in a setting that resonates with the car's essence.",
     },
     {
       images: [img1, img2],
-      title: "MAPF1 X MAD DOG JONES SS24",
+      title: "MAPF1 X MAD DOG JONES",
       body: "With inspiration from the dynamic world of motorsport and the visionary artistry of Mad Dog Jones, this one-of-a-kind collection encapsulates the essence of championship spirit. By seamlessly blending the heritage of the Mercedes-AMG PETRONAS Formula 1 Team with the retro-futurism of Mad Dog Jones, each piece becomes a timeless symbol of excellence.",
       link: "https://about.puma.com/en/newsroom/product-and-brand-news/2024/26-04-2024-mercedes-amg-petronas-f1-team-mad-dog-jones-and",
     },
