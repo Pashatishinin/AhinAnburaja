@@ -18,28 +18,35 @@ export default function Contact() {
   ];
   
   useEffect(() => {
-     
-    ScrollReveal().reveal(".contact-title", {
+     const sr_ct = ScrollReveal();
+     const sr_cb = ScrollReveal();
+     const sr_ib = ScrollReveal();
+    sr_ct.reveal(".contact-title", {
       origin: "bottom",
       distance: "200px",
       duration: 2000,
-      delay:200,
+      delay: 200,
       reset: false,
     });
-    ScrollReveal().reveal(".cont-box", {
+    sr_cb.reveal(".cont-box", {
       origin: "right",
       distance: "200px",
       duration: 2000,
       delay: 200,
-      reset: false,
+      reset: true,
     });
-    ScrollReveal().reveal(".img-box", {
+    sr_ib.reveal(".img-box", {
       origin: "left",
       distance: "200px",
       duration: 2000,
       delay: 200,
-      reset: false,
+      reset: true,
     });
+    return () => {
+      sr_ct.destroy();
+      sr_cb.destroy();
+      sr_ib.destroy();
+    };
   }, []);
 
   return (

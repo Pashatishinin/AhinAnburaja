@@ -71,7 +71,7 @@ export default function Country() {
   useEffect(() => {
     
     // Добавляем отложенную инициализацию
-    const timeoutId = setTimeout(() => {
+    // const timeoutId = setTimeout(() => {
       const pin = gsap.fromTo(
         sectionRef.current,
         { translateX: 0 },
@@ -95,8 +95,9 @@ export default function Country() {
       // Удаляем анимацию при размонтировании компонента
       return () => {
         pin.kill();
+        ScrollTrigger.getAll().forEach(trigger => trigger.kill()); // Уничтожаем все триггеры
       };
-    }, 100); // Здесь вы можете изменить задержку, если требуется больше времени
+    // }, 100); // Здесь вы можете изменить задержку, если требуется больше времени
 
     // Очищаем таймер при размонтировании компонента
     return () => clearTimeout(timeoutId);

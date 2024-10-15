@@ -59,7 +59,9 @@ export default function Hero() {
   }, []);
 
   useEffect(() => {
-    ScrollReveal().reveal(".hero-block", {
+    const sr_hb = ScrollReveal();
+    const sr_cm = ScrollReveal();
+    sr_hb.reveal(".hero-block", {
       origin: "bottom",
       distance: "200px",
       duration: 800,
@@ -77,7 +79,7 @@ export default function Hero() {
         el.style.transform = "translateY(0)"; // Устанавливаем конечную позицию
       },
     });
-    ScrollReveal().reveal(".circle_main", {
+    sr_cm.reveal(".circle_main", {
       duration: 2000,
       scale: 1,
       delay: 200,
@@ -90,6 +92,10 @@ export default function Hero() {
         el.style.opacity = 1; // После анимации делаем элемент видимым
       },
     });
+    return () => {
+      sr_hb.destroy();
+      sr_cm.destroy();
+    };
   }, []);
 
   useEffect(() => {

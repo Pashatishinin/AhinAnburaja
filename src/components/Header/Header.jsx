@@ -12,12 +12,16 @@ export default function Header() {
   const textRefs = useRef([]); // Ссылка на все текстовые элементы меню
 
   useEffect(() => {
-    ScrollReveal().reveal(".nav", {
+    const sr_nav = ScrollReveal();
+    sr_nav.reveal(".nav", {
       origin: "top",
       distance: "200px",
       duration: 2000,
       delay: 200,
     });
+    return () => {
+      sr_nav.destroy();
+    };
   }, []);
 
   // LOGOTYPE ANIMATION =============================================================== //

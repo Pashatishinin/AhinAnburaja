@@ -13,13 +13,15 @@ import ScrollReveal from "scrollreveal";
 export default function About() {
   
   useEffect(() => {
-    ScrollReveal().reveal(".about-title", {
+    const sr_at = ScrollReveal()
+    sr_at.reveal(".about-title", {
       origin: "bottom",
       distance: "200px",
       duration: 2000,
       delay: 200,
       interval: 300,
     });
+    
 
     const splitTypes = document.querySelectorAll(".reveal");
 
@@ -41,6 +43,9 @@ export default function About() {
         delay: i < 10 ? 0.2 : 0,
       });
     });
+    return () => {
+      sr_at.destroy();
+    };
   }, []);
 
   return (

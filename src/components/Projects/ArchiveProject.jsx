@@ -34,13 +34,17 @@ import img24 from "../../assets/PUMA_X_MAPF1_X_Power_AH23/24.jpg";
 export default function ArchiveProject() {
   // project animation
   useEffect(() => {
-    ScrollReveal().reveal(".project-card", {
+    const sr_pc = ScrollReveal();
+    sr_pc.reveal(".project-card", {
       origin: "bottom",
       distance: "200px",
       duration: 2000,
       delay: 200,
       interval: 300,
     });
+    return () => {
+      sr_pc.destroy();
+    };
   }, []);
   const [model, setModel] = useState(false);
   const [tempimgScr, setTempImgScr] = useState("");

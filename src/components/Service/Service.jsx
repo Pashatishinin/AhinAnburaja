@@ -4,13 +4,17 @@ import ScrollReveal from "scrollreveal";
 
 export default function Service() {
   useEffect(() => {
-    ScrollReveal().reveal(".item-card, .service-title ", {
+    const sr_st = ScrollReveal();
+    sr_st.reveal(".item-card, .service-title ", {
       origin: "bottom",
       distance: "200px",
       duration: 2000,
       delay: 200,
       interval: 300,
     });
+    return () => {
+      sr_st.destroy();
+    };
   }, []);
 
   const services = [
