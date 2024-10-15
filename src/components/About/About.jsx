@@ -45,6 +45,7 @@ export default function About() {
     });
     return () => {
       sr_at.destroy();
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, []);
 

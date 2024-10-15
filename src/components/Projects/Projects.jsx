@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useRef } from "react";
+import React, { useEffect, useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import img1 from "../../assets/MAPF1_X_MAD DOG_JONES/project_1.jpg";
 import img2 from "../../assets/PUMA_x_AMG_SEASONAL_CONCEPT_AH24/project_2.jpg";
@@ -17,7 +17,7 @@ export default function Projects() {
   const projects = useRef()
 
 
-  useGSAP(() => {
+  useEffect(() => {
     let ctx = gsap.context(() => {
       gsap.set(".photo:not(:first-child)", { y: 500 });
 
@@ -38,7 +38,12 @@ export default function Projects() {
         // markers: true,
       });
     });
-  }, {scope: projects});
+
+    return () => {
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill()); // Уничтожаем все триггеры
+    };
+
+  }, []);
 
 
 
