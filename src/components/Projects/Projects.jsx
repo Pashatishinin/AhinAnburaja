@@ -18,7 +18,6 @@ export default function Projects() {
 
 
   useGSAP(() => {
-    gsap.registerPlugin(ScrollTrigger);
     let ctx = gsap.context(() => {
       gsap.set(".photo:not(:first-child)", { y: 500 });
 

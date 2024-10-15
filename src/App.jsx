@@ -1,4 +1,7 @@
 import { useState } from "react";
+
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import viteLogo from "/vite.svg";
 import Hero from "./components/Hero/Hero";
 import Service from "./components/Service/Service";
@@ -18,6 +21,7 @@ import "./App.css";
 import "./index.css";
 
 function App() {
+   gsap.registerPlugin(ScrollTrigger);
 
   const [loading, setLoading] = useState(true);
 

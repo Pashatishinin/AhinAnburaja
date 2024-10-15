@@ -69,7 +69,7 @@ export default function Country() {
   
   
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
+    
     // Добавляем отложенную инициализацию
     const timeoutId = setTimeout(() => {
       const pin = gsap.fromTo(
@@ -84,8 +84,10 @@ export default function Country() {
             start: "top top",
             end: "+=2000 top", // Модифицированный end
             scrub: 0.6,
+            markers: true,
             pin: true,
             invalidateOnRefresh: true,
+            
           },
         }
       );

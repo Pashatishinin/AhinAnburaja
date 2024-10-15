@@ -13,7 +13,6 @@ import ScrollReveal from "scrollreveal";
 export default function About() {
   
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
     ScrollReveal().reveal(".about-title", {
       origin: "bottom",
       distance: "200px",

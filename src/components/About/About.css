@@ -16,7 +16,7 @@
     xl:text-8xl;
   }
   .about-info {
-    @apply pt-10 text-white font-montserrat text-lg w-full font-normal tracking-widest leading-relaxed
+    @apply pt-10 text-white font-montserrat text-base w-full font-normal tracking-widest leading-relaxed
     sm:text-xl
     md:text-2xl 
     lg:w-3/5;
