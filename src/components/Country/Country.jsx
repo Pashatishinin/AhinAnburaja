@@ -92,7 +92,7 @@ export default function Country() {
         }
       );
       ScrollTrigger.refresh();
-      
+
       return () => {
         
         pin.kill();
@@ -101,7 +101,7 @@ export default function Country() {
 
       // Удаляем анимацию при размонтировании компонента
       
-    }, 100);
+    }, 300);
     
     return () => {
       clearTimeout(timeoutId);
