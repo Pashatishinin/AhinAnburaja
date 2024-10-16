@@ -1,4 +1,3 @@
-
 import Hero from "../Hero/Hero";
 import Service from "../Service/Service";
 import About from "../About/About";
@@ -9,17 +8,14 @@ import Header from "../Header/Header";
 import ArchiveProject from "../Projects/ArchiveProject.jsx";
 import Projects from "../Projects/Projects.jsx";
 
-
 function App() {
-  
-
   return (
     <>
       <Header />
       <Hero />
 
       <Service />
-      <Projects /> 
+      <Projects />
       <ArchiveProject />
       <About />
       <Country />

@@ -1,27 +1,15 @@
 import { useState } from "react";
-
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import viteLogo from "/vite.svg";
-import Hero from "./components/Hero/Hero";
-import Service from "./components/Service/Service";
-import About from "./components/About/About";
-import Country from "./components/Country/Country";
-import Contact from "./components/Contact/Contact";
-import Footer from "./components/Footer/Footer";
-import Projects from "./components/Projects/Projects";
-import Header from "./components/Header/Header";
-import ArchiveProject from "./components/Projects/ArchiveProject.jsx";
-import Preloader from "./components/PreLoader/PreLoader.jsx"
-import MainContent from "./components/MainContent/MainContent.jsx"
 
-
+import Preloader from "./components/PreLoader/PreLoader.jsx";
+import MainContent from "./components/MainContent/MainContent.jsx";
 
 import "./App.css";
 import "./index.css";
 
 function App() {
-   gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(ScrollTrigger);
 
   const [loading, setLoading] = useState(true);
 
@@ -30,26 +18,8 @@ function App() {
     setLoading(false);
   };
 
-
   return (
-    <>
-      {loading ? <Preloader onFinish={handleFinish} /> : <MainContent />}
-      {/* <Service /> 
-      <About/>
-      <Country/> */}
-      {/* <Header />
-      <Hero /> */}
-
-      {/* <Service />
-      <Projects />
-
-      <ArchiveProject /> */}
-      {/* <About /> */}
-
-      {/* <Country /> */}
-      {/* <Contact /> */}
-      {/* <Footer /> */}
-    </>
+    <>{loading ? <Preloader onFinish={handleFinish} /> : <MainContent />}</>
   );
 }
 

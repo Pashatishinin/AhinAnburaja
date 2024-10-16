@@ -1,8 +1,6 @@
-
 /* GOOGLE FONTS */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -13,17 +11,13 @@
   padding: 0;
   box-sizing: border-box;
   behavior: smooth;
-  
 }
 html {
   scroll-behavior: smooth;
-
 }
 body {
-    background-color: #030712;
-    
+  background-color: #030712;
 }
-
 
 .circle {
   width: 400px;
@@ -34,18 +28,4 @@ body {
   position: absolute;
   border-radius: 50%;
 }
-
-
-
-.circle_main {
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-}
-
-
-.hero-block {
-  visibility: hidden; /* Скрываем элемент до анимации, чтобы он не был виден до скролла */
-}
-
-
 
